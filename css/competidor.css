@@ -1,0 +1,125 @@
+
+fieldset{
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 92%;
+}
+
+fieldset#data-pers{
+    height: 300px;
+}
+
+#indicaciones{
+    margin-left: 80px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+#categorias{
+    position: relative;
+    left: 30px;
+    height: 300px;
+}
+
+fieldset#hab_cat{
+padding: 30px -5px 20px 10px;
+height: 500px;
+}
+
+#data-comp{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+#radio-btn{ /*contenedor de los radiobutton*/
+     display:block;
+     position: relative;
+     left: 450px;
+     top: -200px;
+}
+
+#radio-btn input{
+    margin: 10px 10px;
+}
+
+input{
+    margin-bottom: 20px;
+}
+
+input#nombre{
+    width: 200px;
+}
+
+input#edad{
+    width: 60px;
+}
+#botones{/*caja contenedora de los botones*/
+    display: inline-flex;
+    position: relative;
+    top: 50px;
+    left: 150px;
+}
+
+/* #lnk-buscar{
+    text-align:center;
+    padding: 15px 0;
+    text-decoration: none;
+    background-color: rgb(239, 248, 106);
+    width: 150px;
+    height: 28px;
+    border-radius: 0.3em;
+    border-style: 1px solid black;
+    position: relative;
+    top: -10px;
+} */
+
+button{
+    width: 150px;
+    height: 60px;
+    margin: -10px 10px;
+}
+/* button:hover{
+    cursor: pointer;
+} */
+
+#lnk-buscar { 
+    background-color: rgb(239, 248, 106);
+    width: 150px;
+    height: 48px;
+    border-radius: 0.3em;
+    text-align:center;
+    /* font-weight: bold; */
+    padding-top: 10px;
+    background-color: #ffffcc;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    top: -10px;
+ }
+
+ #lnk-buscar:link,#lnk-buscar:visited {
+    border-top: 1px solid #cccccc;
+    border-bottom: 2px solid #666666;
+    border-left: 1px solid #cccccc;
+    border-right: 2px solid #666666;
+ }
+ #lnk-buscar:hover {
+     border-bottom: 1px solid #cccccc;
+    border-top: 2px solid #666666;
+    border-right: 1px solid #cccccc;
+    border-left: 2px solid #666666;
+ }
+
+/*AGREGADO PARA TABLAS*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, td, th {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+th {text-align: left;}

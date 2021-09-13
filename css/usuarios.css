@@ -1,0 +1,101 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: Arial,sans-serif;
+	font-size: 16px;
+}
+
+.lado{
+	margin-top: -21px;
+	width: 200px;
+	height: 800px;
+	margin-right:20px;
+	float: right;
+}
+
+.botones{
+	height: 394px;
+}
+
+.centro{
+	float: center;
+}
+
+
+fieldset{
+	margin: 20px auto;
+	padding: 30px 0;
+}
+
+#datosPersonales{	
+	width: 550px;
+	height: 160px;
+
+}
+
+#datosUsuario{
+	width: 550px;
+	height: 150px;
+}
+
+
+
+.dataPer-label{
+	position: relative;
+	left: 50px;
+	top: -10px;
+	z-index: -10;
+}
+
+.dataPer-input{
+	margin-bottom:10px ;
+	position: relative;
+	left: 80px;
+	top: -10px;
+	
+}
+
+#nombre, #apellido{
+	width: 150px;
+}
+
+#escuela, #estilo{
+	width: 250px;
+}
+
+.dataUser-label{
+	margin: 30px 0;
+	position: relative;
+	left: 50px;
+}
+
+[name="user"]{
+	position: relative;
+	left: 85px;
+	margin: 15px 0;
+	width: 150px;
+}
+
+[name="pass"]{
+	position: relative;
+	left: 57px;
+}
+
+[name="practica"]{
+	position: relative;
+	left: 98px;
+}
+
+
+
+button{
+	display: block;
+}
+
+select{
+	margin-top: 20px;
+	margin-left: 223px;
+}
+
+
+
