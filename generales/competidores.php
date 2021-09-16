@@ -10,9 +10,13 @@ $rol = $_SESSION['rol'];
 if (!isset($usuario) || $rol != 1) {
 	header('location:../index.php');
 }
+include '../otros/head.html';
 ?>
-
-<?php include '../otros/menu.html'; ?>
+</head>
+<body>
+<?php
+include '../otros/menu.html'; 
+?>
 <div id="container">
 
 		<h2 id="UserConected">Conectado:<?php echo ' ' . $usuario; ?></h2>
@@ -77,3 +81,5 @@ if (!isset($usuario) || $rol != 1) {
 	<script type="text/javascript" src="../js/Competidor.js?v=<?php echo (rand()); ?>"></script>
 		</div>
 <?php include '../otros/footer.html';?>
+</body>
+</html>

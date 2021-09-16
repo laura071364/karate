@@ -11,9 +11,13 @@ if (!isset($usuario) || $rol != 1) {
 }
 
 $query = mysqli_query($conex, "select * from roles");
+include '../otros/head.html';
 ?>
-<?php include '../otros/menu.html'; ?>
-	<!-- fin menu--------------------------------->
+</head>
+<body>
+<?php
+include '../otros/menu.html'; 
+?>
 	<div id="container">
 		<h2 id="UserConected">Conectado:<?php echo ' ' . $usuario; ?></h2>
 		<div id="titulo">
@@ -78,3 +82,5 @@ $query = mysqli_query($conex, "select * from roles");
 	<script type="text/javascript" src="../js/usuarios.js?v=<?php echo (rand()); ?>"></script>
 	
 <?php include '../otros/footer.html';?>
+</body>
+</html>

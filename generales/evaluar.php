@@ -9,12 +9,16 @@ $rol = $_SESSION['rol'];
 if (!isset($usuario) || $rol != 1) {
 	header('location:../index.html');
 }
+include '../otros/head.html';
 ?>
-<?php include '../otros/menu.html'; 
+<script type="text/css"><?php include '../css/eval.css'; ?></script>
+</head>
+<body>
+<?php
+include '../otros/menu.html'; 
 ?>
-
 <div id="container">
-<style type="text/css"><?php include '../css/eval.css'; ?></style>
+
     <h2 id="UserConected">Conectado:<?php echo ' ' . $usuario; ?></h2><br>
 	<div id="titulo">
 		<h2 id="titulo">CREAR EVALUACION</h2>
@@ -39,6 +43,24 @@ if (!isset($usuario) || $rol != 1) {
             <label id="check_cant_arb"></label>
 		</div>
 
+		<div id="reg-tabla">
+        	<table id="tabla-competidores">
+        		<thead>
+        			<th>id</th>
+        			<th>Nombre(s)</th>
+        			<th>Apellido</th>
+        			<th>edad</th>
+        			<th>genero</th>
+        		</thead>
+        		<tbody>
+        			
+        		</tbody>
+        		
+        	</table>
+        	
+        </div>
+
+
         <div id="box_arbitros">
             <label id="label_arbitros" for="selector_arbitros">ARBITROS</label><br/>
             <select name="selector_arbitros[]" id="selector_arbitros" multiple>
@@ -55,8 +77,11 @@ if (!isset($usuario) || $rol != 1) {
             </select>
             
         </div>
-
+        
     </form>
 </div>
+<script type="text/javascript" src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../js/evaluacion.js?v=<?php echo (rand()); ?>"></script>
 <?php include '../otros/footer.html';?>
+</body>
+</html>

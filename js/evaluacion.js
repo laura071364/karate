@@ -1,11 +1,19 @@
-var ultimoValorValido = null;
-$("#evaluador").on("change", function() {
-  if (($("#evaluador option:checked").length = 3) || ($("#evaluador option:checked").length = 5) || ($("#evaluador option:checked").length = 7)){
-    $("#evaluador").val(ultimoValorValido);
-  } else {
-   alert("solo puede seleccionar 3,5 o 7");
-    ultimoValorValido = $("#evaluador").val();
-  }
+$(document).ready(function(){
+  
+  $('#tabla-competidores').Datatable({
+    "ajax":{
+      "url":"../php/competidor_crud/search.php",
+      "dataSrc":"",//no puse nada porq la consulta esta en search 
+    },
+    "columns":[
+      {"data":"idCompetidor"},
+      {"data":"nombre"},
+      {"data":"apellido"},
+      {"data":"edad"},
+      {"data":"genero"}
+    ]
+  });
+
 });
 
 

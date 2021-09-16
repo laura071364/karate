@@ -1,49 +1,19 @@
 <?php
   include '../consultas.php';
- if(isset($_GET['idcat'])){
-    $categoria=$_GET['idcat'];
-    var_dump($categoria);
-  }
-  function consultarExisteCompetidor($nombre,$apellido,$edad,$genero){
-    $con=conectarDB();
+ // if(isset($_GET['idcat'])){
+ //    $categoria=$_GET['idcat'];
+    
+ //  }
+  $sql="SELECT * FROM competidores";
 
-    $sql="SELECT * FROM competidores WHERE nombre = '".$nombre."' AND apellido="."'".$apellido."'nombre = ".$edad." AND genero='".$genero."' LIMIT 1";
+  // $conn=conectarDB();
+  // $query=mysqli_query($conn,$sql);
 
-    ?>
-    <table>
-      <thead>
-      <tr>
-        <th>Nombres</th>
-        <th>apellido</th>
-        <th>Edad</th>
-        <th>Genero</th>
-      </tr>
-      </thead>
-      <tbody>
-      <?php
+  
+  // $result=mysqli_fetch_array($query,MYSQLI_ASSOC);
 
+  $data=consultaSQL($sql);
 
-    $datos=array();
+  echo json_encode($data);//envio del array final en formato json
 
-    $datos=consultaSQL($sql);
-
-    var_dump($datos);
-
-     //  while($row = mysqli_fetch_array($result)) {
-
-     //    echo "<tr>";
-     //    echo "<td>" . $row['nombre'] . "</td>";
-     //    echo "<td>" . $row['apellido'] . "</td>";
-     //    echo "<td>" . $row['edad'] . "</td>";
-     //    if($row['genero']='f')
-     //      echo "<td>Femenino</td>";
-     //    else
-     //      echo "<td>Masculino</td>";
-
-     //    echo "</tr>";
-     //  }
-     //  echo "</tbody>";
-     //  echo "</table>";
-     // desconectarDB($con);
-  }
 ?>

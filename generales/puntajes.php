@@ -9,9 +9,13 @@ $rol = $_SESSION['rol'];
 if (!isset($usuario) || $rol != 1) {
 	header('location:../index.php');
 }
+include '../otros/head.html';
 ?>
-<?php include '../otros/menu.html'; ?>
-<!-- fin menu--------------------------------->
+</head>
+<body>
+<?php
+include '../otros/menu.html'; 
+?>
 	<div id="container">
 		
 		<h2 id="UserConected">Conectado: <?php echo ' ' . $usuario; ?></h2>
@@ -36,6 +40,7 @@ if (!isset($usuario) || $rol != 1) {
 						<?php
 					}
 				 ?>
+				</select>
 				<span id='resultado'></span>
 			</div>
 			
@@ -107,3 +112,5 @@ if (!isset($usuario) || $rol != 1) {
 		
 	</div>
 <?php include '../otros/footer.html';?>
+</body>
+</html>

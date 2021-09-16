@@ -9,10 +9,13 @@ $rol = $_SESSION['rol'];
 if (!isset($usuario) || $rol != 1) {
 	header('location:../index.html');
 }
+include '../otros/head.html';
 ?>
-<?php include '../otros/menu.html'; 
+</head>
+<body>
+<?php
+include '../otros/menu.html'; 
 ?>
-
 <div id="container">
 	<style type="text/css" ><?php include '../css/cuerpoAdmin.css'; ?></style>
 	<!-- fin menu--------------------------------->
@@ -66,3 +69,5 @@ if (!isset($usuario) || $rol != 1) {
 	</div>
 	<script type="text/javascript" src="../js/principal_admin.js?v=<?php echo (rand()); ?>"></script>
 <?php include '../otros/footer.html';?>
+</body>
+</html>
